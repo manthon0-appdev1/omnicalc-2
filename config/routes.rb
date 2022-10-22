@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get("/", {:controller => "application", :action => "add"})
+  get("/add", {:controller => "application", :action => "add"})
+  get("/add/results", :controller => "application", :action => "display_sum")
+  get("/subtract", {:controller => "application", :action => "subtract"})
+  get("/subtract/results", {:controller => "application", :action => "display_difference"})
+  get("/multiply", {:controller => "application", :action => "multiply"})
+  get("/multiply/results", {:controller => "application", :action => "display_product"})
+  get("/divide", {:controller => "application", :action => "divide"})
+  get("/divide/results", {:controller => "application", :action => "display_quotient"})
 end
